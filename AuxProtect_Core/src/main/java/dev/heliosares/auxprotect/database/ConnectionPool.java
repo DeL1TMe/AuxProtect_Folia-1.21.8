@@ -180,6 +180,9 @@ public class ConnectionPool {
             return;
         }
         closed = true;
+        if (connection == null) {
+            return;
+        }
         if (!isMySQL()) {
             try {
                 execute("PRAGMA optimize", connection);

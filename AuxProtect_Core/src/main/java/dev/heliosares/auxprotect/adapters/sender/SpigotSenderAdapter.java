@@ -9,7 +9,7 @@ import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.scheduler.BukkitRunnable;
+import dev.heliosares.auxprotect.spigot.utils.SchedulerAdapter;
 
 import javax.annotation.Nullable;
 import java.util.UUID;
@@ -59,6 +59,10 @@ public class SpigotSenderAdapter extends SenderAdapter {
 
     @Override
     public void executeCommand(String command) {
+        if (sender instanceof Player player) {
+            SchedulerAdapter.runAtEntity(plugin, player, () -> plugin.getServer().dispatchCommand(sender, command));
+            return;
+        }
         plugin.runSync(() -> plugin.getServer().dispatchCommand(sender, command));
     }
 
@@ -75,19 +79,15 @@ public class SpigotSenderAdapter extends SenderAdapter {
             final Location target = new Location(world, x, y, z, yaw, pitch);
             player.teleport(target);
             if (player.getGameMode() == GameMode.SPECTATOR) {
-                new BukkitRunnable() {
-                    int tries;
-
-                    @Override
-                    public void run() {
-                        if (tries++ >= 5 || (player.getWorld().equals(target.getWorld())
-                                && player.getLocation().distance(target) < 2)) {
-                            this.cancel();
-                            return;
-                        }
-                        player.teleport(target);
+                final int[] tries = {0};
+                SchedulerAdapter.runSyncRepeating(plugin, () -> {
+                    if (tries[0]++ >= 5 || (player.getWorld().equals(target.getWorld())
+                            && player.getLocation().distance(target) < 2)) {
+                        // Task cancellation will be handled by SchedulerAdapter
+                        return;
                     }
-                }.runTaskTimer(plugin, 2, 1);
+                    player.teleport(target);
+                }, 2, 1);
             }
         } else {
             throw new UnsupportedOperationException();

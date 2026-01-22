@@ -20,7 +20,6 @@ import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
-import org.json.simple.parser.ParseException;
 
 import javax.annotation.Nullable;
 import java.io.IOException;
@@ -84,7 +83,7 @@ public class PlaybackSolver extends BukkitRunnable {
             if (skins.size() >= 5) break;
             try {
                 skins.put(point.uuid, FakePlayer.getSkin(point.uuid));
-            } catch (ParseException | IOException | InterruptedException e) {
+            } catch (IOException | InterruptedException e) {
                 plugin.warning("Failed to get skin for " + point.name());
                 plugin.print(e);
             }

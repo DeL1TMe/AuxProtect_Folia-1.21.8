@@ -10,6 +10,7 @@ import dev.heliosares.auxprotect.database.SingleItemEntry;
 import dev.heliosares.auxprotect.exceptions.BusyException;
 import dev.heliosares.auxprotect.spigot.APPlayerSpigot;
 import dev.heliosares.auxprotect.spigot.AuxProtectSpigot;
+import dev.heliosares.auxprotect.spigot.utils.SchedulerAdapter;
 import dev.heliosares.auxprotect.utils.InvSerialization;
 import dev.heliosares.auxprotect.utils.PlaybackSolver;
 import net.md_5.bungee.api.ChatColor;
@@ -53,7 +54,6 @@ import org.bukkit.inventory.meta.Damageable;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.PotionMeta;
 import org.bukkit.potion.PotionType;
-import org.bukkit.scheduler.BukkitRunnable;
 
 import java.sql.SQLException;
 import java.util.Arrays;
@@ -133,7 +133,7 @@ public class PlayerListener implements Listener {
             }
             if (item.getType() == Material.WATER_BUCKET) {
                 if (mobs.contains(e.getRightClicked().getType())) {
-                    plugin.getServer().getScheduler().runTaskLater(plugin, () -> {
+                    SchedulerAdapter.runSyncLater(plugin, () -> {
                         ItemStack newBucket = e.getPlayer().getInventory().getItem(e.getHand());
                         if (newBucket != null && !buckets.contains(newBucket.getType())) newBucket = null;
                         plugin.add(new SingleItemEntry(AuxProtectSpigot.getLabel(e.getPlayer()), EntryAction.BUCKET, true,
@@ -216,7 +216,7 @@ public class PlayerListener implements Listener {
             String data = "";
             if (plugin.getAPConfig().isSessionLogIP()) data = "IP: " + ip;
             logSession(e.getPlayer(), true, data);
-            plugin.getServer().getScheduler().runTaskAsynchronously(plugin, () -> {
+            SchedulerAdapter.runAsync(plugin, () -> {
                 try {
                     plugin.getSqlManager().getUserManager().updateUsernameAndIP(e.getPlayer().getUniqueId(),
                             e.getPlayer().getName(), ip);
@@ -227,13 +227,13 @@ public class PlayerListener implements Listener {
                 }
             });
             if (APPermission.LOOKUP.hasPermission(e.getPlayer()) || APPermission.CSLOGS.hasPermission(e.getPlayer()) && EntryAction.SHOP_CS.isEnabled()) {
-                plugin.getServer().getScheduler().runTaskAsynchronously(plugin, apPlayer::getTimeZone);
+                SchedulerAdapter.runAsync(plugin, apPlayer::getTimeZone);
             }
         }
 
         apPlayer.logInventory("join");
 
-        plugin.getServer().getScheduler().runTaskLaterAsynchronously(plugin, () -> {
+        SchedulerAdapter.runAsyncLater(plugin, () -> {
             try {
                 if (plugin.getSqlManager().getUserManager()
                         .getPendingInventory(plugin.getSqlManager().getUserManager()
@@ -260,7 +260,7 @@ public class PlayerListener implements Listener {
         }, 40);
 
         if (plugin.update != null && APPermission.ADMIN.hasPermission(e.getPlayer())) {
-            plugin.getServer().getScheduler().runTaskLater(plugin, () -> plugin.tellAboutUpdate(e.getPlayer()), 20);
+            SchedulerAdapter.runSyncLater(plugin, () -> plugin.tellAboutUpdate(e.getPlayer()), 20);
         }
     }
 
@@ -292,24 +292,20 @@ public class PlayerListener implements Listener {
         }
         final byte[] inventory = inventory_;
 
-        new BukkitRunnable() {
-            @Override
-            public void run() {
-                byte[] newInventory = null;
-                try {
-                    newInventory = InvSerialization.playerToByteArray(e.getPlayer());
-                } catch (Exception e1) {
-                    plugin.warning("Error serializing inventory for teleport");
-                    plugin.print(e1);
-                }
-                if (Arrays.equals(inventory, newInventory)) {
-                    return;
-                }
-                apPlayer.logInventory("worldchange", e.getFrom(), inventory);
-                apPlayer.logInventory("worldchange", e.getTo(), newInventory);
+        SchedulerAdapter.runSyncLater(plugin, () -> {
+            byte[] newInventory = null;
+            try {
+                newInventory = InvSerialization.playerToByteArray(e.getPlayer());
+            } catch (Exception e1) {
+                plugin.warning("Error serializing inventory for teleport");
+                plugin.print(e1);
             }
-
-        }.runTaskLater(plugin, 3);
+            if (Arrays.equals(inventory, newInventory)) {
+                return;
+            }
+            apPlayer.logInventory("worldchange", e.getFrom(), inventory);
+            apPlayer.logInventory("worldchange", e.getTo(), newInventory);
+        }, 3);
     }
 
     @EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
