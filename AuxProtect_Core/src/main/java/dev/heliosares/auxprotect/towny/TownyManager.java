@@ -25,6 +25,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
+@SuppressWarnings("deprecation")
 public class TownyManager implements Runnable {
     private final AuxProtectSpigot plugin;
     private final SQLManager sql;

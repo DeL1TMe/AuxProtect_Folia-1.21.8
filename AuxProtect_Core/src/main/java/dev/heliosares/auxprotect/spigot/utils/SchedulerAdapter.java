@@ -9,6 +9,7 @@ import org.bukkit.plugin.java.JavaPlugin;
  * Абстракция для работы с планировщиком задач.
  * Поддерживает как обычный Spigot/Paper, так и Folia.
  */
+@SuppressWarnings("deprecation")
 public class SchedulerAdapter {
     
     private static final boolean isFolia = detectFolia();
@@ -58,6 +59,17 @@ public class SchedulerAdapter {
         if (isFolia) {
             Bukkit.getGlobalRegionScheduler().runDelayed(plugin, 
                 (scheduledTask) -> task.run(), delayTicks);
+            return;
+        }
+        Bukkit.getScheduler().runTaskLater(plugin, task, delayTicks);
+    }
+
+    /**
+     * Выполнить синхронную задачу позже (в тиках) на потоке сущности
+     */
+    public static void runSyncLaterAtEntity(JavaPlugin plugin, Entity entity, Runnable task, long delayTicks) {
+        if (isFolia) {
+            entity.getScheduler().runDelayed(plugin, (scheduledTask) -> task.run(), null, delayTicks);
             return;
         }
         Bukkit.getScheduler().runTaskLater(plugin, task, delayTicks);

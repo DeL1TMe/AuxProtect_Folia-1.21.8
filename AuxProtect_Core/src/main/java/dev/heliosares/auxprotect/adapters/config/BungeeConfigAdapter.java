@@ -15,6 +15,7 @@ import java.util.Set;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
+@SuppressWarnings("deprecation")
 public class BungeeConfigAdapter extends ConfigAdapter {
     private Configuration config;
 

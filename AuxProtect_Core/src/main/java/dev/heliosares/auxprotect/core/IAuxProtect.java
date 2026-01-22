@@ -10,6 +10,7 @@ import java.io.InputStream;
 import java.util.Set;
 import java.util.function.Consumer;
 
+@SuppressWarnings("deprecation")
 public interface IAuxProtect {
 
     File getDataFolder();

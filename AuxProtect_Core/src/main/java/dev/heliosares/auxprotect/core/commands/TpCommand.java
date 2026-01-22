@@ -12,6 +12,7 @@ import dev.heliosares.auxprotect.exceptions.SyntaxException;
 
 import java.util.List;
 
+@SuppressWarnings("deprecation")
 public class TpCommand extends Command {
 
     public TpCommand(IAuxProtect plugin) {

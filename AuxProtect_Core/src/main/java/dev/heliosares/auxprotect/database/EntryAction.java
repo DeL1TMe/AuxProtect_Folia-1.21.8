@@ -14,6 +14,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+@SuppressWarnings("deprecation")
 public class EntryAction {
     private static final Map<String, EntryAction> values = new HashMap<>();
     private static final Set<String> usednames = new HashSet<>();

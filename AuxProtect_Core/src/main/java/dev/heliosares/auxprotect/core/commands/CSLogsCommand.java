@@ -23,6 +23,7 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.UUID;
 
+@SuppressWarnings("deprecation")
 public class CSLogsCommand implements CommandExecutor {
 
     private final AuxProtectSpigot plugin;

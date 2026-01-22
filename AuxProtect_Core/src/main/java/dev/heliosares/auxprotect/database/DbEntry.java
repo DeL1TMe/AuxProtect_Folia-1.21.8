@@ -17,6 +17,7 @@ import javax.annotation.Nullable;
 import java.sql.SQLException;
 import java.util.TimeZone;
 
+@SuppressWarnings("deprecation")
 public class DbEntry {
 
     protected SQLManager getSql() {

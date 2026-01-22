@@ -2,6 +2,7 @@ package dev.heliosares.auxprotect.core;
 
 import dev.heliosares.auxprotect.adapters.sender.SenderAdapter;
 
+@SuppressWarnings("deprecation")
 public class APPermission {
     public static final APPermission NONE = new APPermission(null);
     public static final APPermission NOTIFY_INACTIVE = new APPermission("inactive.notify");

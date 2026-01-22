@@ -15,6 +15,7 @@ import org.bukkit.event.raid.RaidSpawnWaveEvent;
 import org.bukkit.event.raid.RaidTriggerEvent;
 import org.bukkit.event.weather.LightningStrikeEvent;
 
+@SuppressWarnings("deprecation")
 public class WorldListener implements Listener {
 
     private final AuxProtectSpigot plugin;

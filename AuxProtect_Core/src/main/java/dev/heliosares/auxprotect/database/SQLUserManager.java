@@ -8,6 +8,7 @@ import java.sql.*;
 import java.util.*;
 import java.util.concurrent.CompletableFuture;
 
+@SuppressWarnings("deprecation")
 public class SQLUserManager {
     private final IAuxProtect plugin;
     private final SQLManager sql;

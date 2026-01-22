@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+@SuppressWarnings("deprecation")
 public class PurgeCommand extends Command {
 
     public PurgeCommand(IAuxProtect plugin) {

@@ -6,6 +6,7 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.util.TimeZone;
 
+@SuppressWarnings("deprecation")
 public abstract class APPlayer<T> {
     protected final IAuxProtect plugin;
 

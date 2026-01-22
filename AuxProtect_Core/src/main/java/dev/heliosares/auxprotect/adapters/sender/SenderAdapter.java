@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.util.TimeZone;
 import java.util.UUID;
 
+@SuppressWarnings("deprecation")
 public abstract class SenderAdapter {
 
     public abstract Object getSender();

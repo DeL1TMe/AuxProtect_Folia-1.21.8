@@ -6,6 +6,7 @@ import net.md_5.bungee.api.CommandSender;
 import net.md_5.bungee.api.plugin.Command;
 import net.md_5.bungee.api.plugin.TabExecutor;
 
+@SuppressWarnings("deprecation")
 public class APBCommand extends Command implements TabExecutor {
 
     private final AuxProtectBungee plugin;

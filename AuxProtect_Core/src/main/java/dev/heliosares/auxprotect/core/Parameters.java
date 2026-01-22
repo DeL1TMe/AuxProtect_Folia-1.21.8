@@ -24,7 +24,7 @@ import java.util.Set;
 import java.util.UUID;
 import java.util.regex.Pattern;
 
-@SuppressWarnings({"UnusedReturnValue", "unused"})
+@SuppressWarnings({"UnusedReturnValue", "unused", "deprecation"})
 public class Parameters implements Cloneable {
 
     // ----------------------------------------------

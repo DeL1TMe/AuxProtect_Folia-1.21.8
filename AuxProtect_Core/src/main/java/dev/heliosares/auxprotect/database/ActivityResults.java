@@ -12,6 +12,7 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.List;
 
+@SuppressWarnings("deprecation")
 public class ActivityResults extends Results {
 
     private final long rangeStart;

@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.stream.Collectors;
 
+@SuppressWarnings("deprecation")
 public class HelpCommand extends Command {
     private final List<Command> commands;
 

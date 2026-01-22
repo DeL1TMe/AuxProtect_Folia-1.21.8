@@ -15,6 +15,7 @@ import java.sql.SQLException;
 import java.util.*;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
+@SuppressWarnings("deprecation")
 public class InvDiffManager extends BlobManager {
     protected final ConcurrentLinkedQueue<InvDiffRecord> queue = new ConcurrentLinkedQueue<>();
     private final SQLManager sql;

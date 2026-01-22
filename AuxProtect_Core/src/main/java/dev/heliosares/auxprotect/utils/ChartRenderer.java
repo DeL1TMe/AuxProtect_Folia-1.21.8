@@ -10,9 +10,12 @@ import org.bukkit.map.*;
 
 import javax.annotation.Nonnull;
 import java.awt.*;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 
+@SuppressWarnings("deprecation")
 public class ChartRenderer extends MapRenderer {
+    private static final Method MATCH_COLOR_METHOD = resolveMatchColor();
 
     public static final int xShift = 27;
     public static final int yShift = 12;
@@ -42,6 +45,25 @@ public class ChartRenderer extends MapRenderer {
             return output.split("\\.")[0];
         }
         return output;
+    }
+
+    private static Method resolveMatchColor() {
+        try {
+            return MapPalette.class.getMethod("matchColor", Color.class);
+        } catch (NoSuchMethodException ignored) {
+            return null;
+        }
+    }
+
+    private static byte matchColor(Color color) {
+        if (MATCH_COLOR_METHOD == null) {
+            return 0;
+        }
+        try {
+            return (byte) MATCH_COLOR_METHOD.invoke(null, color);
+        } catch (ReflectiveOperationException ignored) {
+            return 0;
+        }
     }
 
     public void update() {
@@ -149,7 +171,6 @@ public class ChartRenderer extends MapRenderer {
         return i;
     }
 
-    @SuppressWarnings("deprecation")
     void setPixelColor(MapCanvas canvas, int x, int y, Color color) {
         if (color == null) {
             color = bgColor;
@@ -157,7 +178,7 @@ public class ChartRenderer extends MapRenderer {
         if (plugin.getCompatabilityVersion() >= 19) {
             canvas.setPixelColor(x, y, color);
         } else {
-            canvas.setPixel(x, y, MapPalette.matchColor(color));
+            canvas.setPixel(x, y, matchColor(color));
         }
     }
 }

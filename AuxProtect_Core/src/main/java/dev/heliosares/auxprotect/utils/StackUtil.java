@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.Map.Entry;
 import java.util.function.Predicate;
 
+@SuppressWarnings("deprecation")
 public class StackUtil {
     public static String dumpThreadStack(Predicate<String> check) {
         StringBuilder trace = new StringBuilder();

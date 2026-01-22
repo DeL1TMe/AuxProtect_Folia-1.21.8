@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import java.sql.Types;
 import java.util.*;
 
+@SuppressWarnings("deprecation")
 public class ResultMap {
     private final Map<String, Integer> labelMap;
     private final List<String> labels;

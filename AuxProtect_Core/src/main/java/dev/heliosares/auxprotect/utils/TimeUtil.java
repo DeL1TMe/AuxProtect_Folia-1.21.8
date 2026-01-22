@@ -7,6 +7,7 @@ import java.time.Instant;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 
+@SuppressWarnings("deprecation")
 public class TimeUtil {
 
     public static final DateTimeFormatter entryTimeFormat = DateTimeFormatter.ofPattern("dd-MMM-yy HH:mm:ss.SSS z");

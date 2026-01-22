@@ -62,6 +62,7 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
+@SuppressWarnings("deprecation")
 public class PlayerListener implements Listener {
 
     private final Set<Material> buckets;

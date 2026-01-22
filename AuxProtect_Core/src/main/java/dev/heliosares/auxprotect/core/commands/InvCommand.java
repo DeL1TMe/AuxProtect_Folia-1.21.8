@@ -48,6 +48,7 @@ import java.util.UUID;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicLong;
 
+@SuppressWarnings("deprecation")
 public class InvCommand extends Command {
     public InvCommand(IAuxProtect plugin) {
         super(plugin, "inv", APPermission.INV, true);

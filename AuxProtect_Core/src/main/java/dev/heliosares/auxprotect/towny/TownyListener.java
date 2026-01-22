@@ -24,6 +24,7 @@ import org.bukkit.event.Listener;
 
 import java.sql.SQLException;
 
+@SuppressWarnings("deprecation")
 public class TownyListener implements Listener {
     private final AuxProtectSpigot plugin;
 

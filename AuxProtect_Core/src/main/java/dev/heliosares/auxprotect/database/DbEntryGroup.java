@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+@SuppressWarnings("deprecation")
 public class DbEntryGroup extends DbEntry {
     private final List<DbEntry> entries = new ArrayList<>();
     private final double range;

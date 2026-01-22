@@ -47,6 +47,7 @@ import dev.heliosares.auxprotect.spigot.utils.SchedulerAdapter;
 
 import java.util.ArrayList;
 
+@SuppressWarnings("deprecation")
 public class EntityListener implements Listener {
 
     final ArrayList<DamageCause> blacklistedDamageCauses;
@@ -194,8 +195,8 @@ public class EntityListener implements Listener {
     @EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
     public void entityDamageEvent(EntityDamageEvent e) {
         if (e.getEntity() instanceof Item item) {
-            SchedulerAdapter.runSyncLater(plugin, () -> {
-                if (e.getEntity().isDead() || !e.getEntity().isValid()) {
+            SchedulerAdapter.runSyncLaterAtEntity(plugin, item, () -> {
+                if (item.isDead() || !item.isValid()) {
                     itemBreak(plugin, "#" + e.getCause(), item.getItemStack(), item.getLocation());
                 }
             }, 1);

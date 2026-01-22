@@ -158,6 +158,11 @@ tasks.named('processResources') {
     }
 }
 
+tasks.withType(JavaCompile).configureEach {
+    // Surface deprecated API usage so we can remove it
+    options.compilerArgs += ['-Xlint:deprecation']
+}
+
 tasks.named('jar') {
     manifest {
         attributes(

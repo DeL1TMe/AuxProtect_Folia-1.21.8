@@ -6,6 +6,7 @@ import dev.heliosares.auxprotect.core.Parameters;
 
 import java.util.List;
 
+@SuppressWarnings("deprecation")
 public class CSLogResults extends Results {
     public CSLogResults(IAuxProtect plugin, List<DbEntry> entries, SenderAdapter player, Parameters params) {
         super(plugin, entries, player, params);

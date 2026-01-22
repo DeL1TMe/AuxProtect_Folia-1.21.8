@@ -13,6 +13,7 @@ import org.bukkit.inventory.ItemStack;
 
 import java.io.IOException;
 
+@SuppressWarnings("deprecation")
 public class ShopGUIPlusListener implements Listener {
     private final AuxProtectSpigot plugin;
 

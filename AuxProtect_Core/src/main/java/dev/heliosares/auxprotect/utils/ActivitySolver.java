@@ -8,7 +8,6 @@ import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.chat.BaseComponent;
 import net.md_5.bungee.api.chat.ClickEvent;
 import net.md_5.bungee.api.chat.ComponentBuilder;
-import net.md_5.bungee.api.chat.ComponentBuilder.FormatRetention;
 import net.md_5.bungee.api.chat.HoverEvent;
 import net.md_5.bungee.api.chat.hover.content.Text;
 import org.bukkit.Bukkit;
@@ -22,11 +21,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+@SuppressWarnings("deprecation")
 public class ActivitySolver {
     public static BaseComponent[][] solveActivity(List<DbEntry> entries, long rangeStart, long rangeEnd) {
         if (entries.isEmpty()) return null;
 
-        ComponentBuilder message = new ComponentBuilder().append("", FormatRetention.NONE);
+        ComponentBuilder message = new ComponentBuilder().append("", ComponentBuilder.FormatRetention.NONE);
         LocalDateTime startTime = Instant.ofEpochMilli(rangeStart).atZone(ZoneId.systemDefault()).toLocalDateTime()
                 .withSecond(0).withNano(0);
         DateTimeFormatter formatterDateTime = DateTimeFormatter.ofPattern("ddMMM hh:mm a");

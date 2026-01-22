@@ -2,6 +2,7 @@ package dev.heliosares.auxprotect.utils;
 
 import org.bukkit.entity.Player;
 
+@SuppressWarnings("deprecation")
 public class Experience {
     /**
      * Calculate a player's total experience based on level and progress to next.

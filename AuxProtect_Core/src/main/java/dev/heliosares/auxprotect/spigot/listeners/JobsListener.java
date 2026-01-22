@@ -14,6 +14,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 
+@SuppressWarnings("deprecation")
 public class JobsListener implements Listener {
     private final AuxProtectSpigot plugin;
 

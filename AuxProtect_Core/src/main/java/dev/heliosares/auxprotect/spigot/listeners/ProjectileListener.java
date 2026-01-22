@@ -19,6 +19,7 @@ import org.bukkit.projectiles.BlockProjectileSource;
 
 import java.util.ArrayList;
 
+@SuppressWarnings("deprecation")
 public class ProjectileListener implements Listener {
 
     final ArrayList<EntityType> whitelist;

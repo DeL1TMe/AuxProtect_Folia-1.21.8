@@ -7,6 +7,7 @@ import net.md_5.bungee.api.connection.ProxiedPlayer;
 import javax.annotation.Nullable;
 import java.net.InetSocketAddress;
 
+@SuppressWarnings("deprecation")
 public class APPlayerBungee extends APPlayer<ProxiedPlayer> {
     public APPlayerBungee(IAuxProtect plugin, ProxiedPlayer player) {
         super(plugin, player);

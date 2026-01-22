@@ -24,6 +24,7 @@ import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("deprecation")
 public class DumpCommand extends Command {
 
     public DumpCommand(IAuxProtect plugin) {

@@ -6,6 +6,7 @@ import dev.heliosares.auxprotect.spigot.Metrics;
 import java.util.HashMap;
 import java.util.Map.Entry;
 
+@SuppressWarnings("deprecation")
 public class Telemetry {
     private static final HashMap<String, Boolean> hooks = new HashMap<>();
 

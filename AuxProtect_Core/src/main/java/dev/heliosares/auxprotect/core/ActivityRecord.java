@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
+@SuppressWarnings("deprecation")
 public record ActivityRecord(@Nonnull List<Activity> activities, double andScore, double distanceMoved) {
     @Override
     public String toString() {

@@ -27,6 +27,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map.Entry;
 
+@SuppressWarnings("deprecation")
 public class SQLManager extends ConnectionPool {
     public static final int MAX_LOOKUP_SIZE = 500000;
     private static SQLManager instance;

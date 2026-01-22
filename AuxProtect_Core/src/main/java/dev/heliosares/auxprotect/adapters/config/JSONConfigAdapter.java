@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
 
+@SuppressWarnings("deprecation")
 public class JSONConfigAdapter extends ConfigAdapter {
 
     JSONObject config;

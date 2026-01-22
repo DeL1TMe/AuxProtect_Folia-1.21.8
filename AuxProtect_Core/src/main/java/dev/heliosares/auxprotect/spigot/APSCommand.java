@@ -10,6 +10,7 @@ import org.bukkit.command.TabExecutor;
 import javax.annotation.Nonnull;
 import java.util.List;
 
+@SuppressWarnings("deprecation")
 public class APSCommand implements CommandExecutor, TabExecutor {
 
     private final AuxProtectSpigot plugin;

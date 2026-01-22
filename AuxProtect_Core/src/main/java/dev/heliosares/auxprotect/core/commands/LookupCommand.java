@@ -46,6 +46,7 @@ import java.util.UUID;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+@SuppressWarnings("deprecation")
 public class LookupCommand extends Command {
 
     static final HashMap<UUID, Results> results = new HashMap<>();

@@ -1,5 +1,6 @@
 package dev.heliosares.auxprotect.adapters.location;
 
+@SuppressWarnings("deprecation")
 public abstract class LocationAdapter {
 
     public abstract String getWorld();

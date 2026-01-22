@@ -8,6 +8,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.UUID;
 
+@SuppressWarnings("deprecation")
 public class XrayEntry extends DbEntry {
 
     private final ArrayList<XrayEntry> children = new ArrayList<>();

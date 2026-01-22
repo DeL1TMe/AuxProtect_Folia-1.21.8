@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+@SuppressWarnings("deprecation")
 public class APPlayerSpigot extends APPlayer<Player> {
     private final List<ActivityRecord> activityStack = new ArrayList<>();
     private ArrayList<Activity> currentActivity;

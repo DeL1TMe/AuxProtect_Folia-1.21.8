@@ -5,6 +5,7 @@ import net.md_5.bungee.api.chat.BaseComponent;
 
 import java.util.UUID;
 
+@SuppressWarnings("deprecation")
 public class FakeSenderAdapter extends SenderAdapter {
 
     private final String name;

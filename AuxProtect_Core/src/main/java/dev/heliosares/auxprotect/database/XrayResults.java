@@ -13,6 +13,7 @@ import net.md_5.bungee.api.chat.hover.content.Text;
 
 import java.sql.SQLException;
 
+@SuppressWarnings("deprecation")
 public class XrayResults {
 
     public static void sendHeader(SenderAdapter sender) {

@@ -19,6 +19,7 @@ import java.util.Iterator;
 import java.util.Map.Entry;
 import java.util.UUID;
 
+@SuppressWarnings("deprecation")
 public class VeinListener implements Listener {
 
     private static final ArrayList<Material> NETHER_CHECK = new ArrayList<>();// TODO config

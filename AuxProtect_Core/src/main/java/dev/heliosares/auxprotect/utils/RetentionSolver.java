@@ -12,6 +12,7 @@ import java.sql.SQLException;
 import java.util.*;
 import java.util.Map.Entry;
 
+@SuppressWarnings("deprecation")
 public class RetentionSolver {
 
     public static void showRetention(IAuxProtect plugin, SenderAdapter sender, List<DbEntry> entries,

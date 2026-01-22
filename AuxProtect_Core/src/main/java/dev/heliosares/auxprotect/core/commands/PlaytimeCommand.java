@@ -11,6 +11,7 @@ import dev.heliosares.auxprotect.exceptions.SyntaxException;
 
 import java.util.List;
 
+@SuppressWarnings("deprecation")
 public class PlaytimeCommand extends Command {
 
     public PlaytimeCommand(IAuxProtect plugin) {

@@ -24,6 +24,7 @@ import java.sql.Types;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
 
+@SuppressWarnings("deprecation")
 public class ConnectionPool {
     private static final long[][] accessTimes = new long[500][];
     private static int expired = 0;

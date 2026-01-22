@@ -11,6 +11,7 @@ import java.sql.SQLException;
 import java.util.*;
 import java.util.function.Consumer;
 
+@SuppressWarnings("deprecation")
 public class VeinManager {
     private final ArrayList<XrayEntry> entries = new ArrayList<>();
     private final ArrayList<XrayEntry> ignoredentries = new ArrayList<>();

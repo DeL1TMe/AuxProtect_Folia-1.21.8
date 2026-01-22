@@ -18,6 +18,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+@SuppressWarnings("deprecation")
 public class InvSerialization {
 
     public static byte[] toByteArray(ItemStack... array) throws IOException {

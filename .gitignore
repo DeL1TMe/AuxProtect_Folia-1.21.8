@@ -1,13 +1,7 @@
-**/target/
 /build/
 /.gradle/
-/test_run/
-/.idea*
+/.idea*/
 *.iml
 .classpath
 .project
-dependency-reduced-pom.xml
 *.log
-*.jar
-/AuxProtect_Private
-/AuxProtect_Private*

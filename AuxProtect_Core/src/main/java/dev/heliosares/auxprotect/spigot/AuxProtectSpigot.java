@@ -78,6 +78,7 @@ import java.util.function.Supplier;
 import java.util.logging.Level;
 import java.util.stream.Collectors;
 
+@SuppressWarnings("deprecation")
 public final class AuxProtectSpigot extends JavaPlugin implements IAuxProtect {
     public static final char LEFT_ARROW = 9668;
     public static final char RIGHT_ARROW = 9658;

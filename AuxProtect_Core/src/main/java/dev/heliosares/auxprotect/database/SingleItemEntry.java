@@ -12,6 +12,7 @@ import javax.annotation.Nullable;
 import java.io.IOException;
 import java.sql.SQLException;
 
+@SuppressWarnings("deprecation")
 public class SingleItemEntry extends DbEntry {
 
     private final int qty;

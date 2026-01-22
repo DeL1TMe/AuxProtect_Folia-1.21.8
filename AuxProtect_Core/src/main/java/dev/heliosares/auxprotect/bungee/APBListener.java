@@ -17,6 +17,7 @@ import net.md_5.bungee.event.EventPriority;
 import java.net.InetSocketAddress;
 import java.sql.SQLException;
 
+@SuppressWarnings("deprecation")
 public class APBListener implements Listener {
     private final AuxProtectBungee plugin;
 

@@ -13,6 +13,7 @@ import org.bukkit.entity.Player;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("deprecation")
 public class SaveInvCommand extends Command {
 
     public SaveInvCommand(IAuxProtect plugin) {

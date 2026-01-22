@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.Map.Entry;
 import java.util.Set;
 
+@SuppressWarnings("deprecation")
 public class BidiMapCache<K, V> {
 
     private final long timeToLive;

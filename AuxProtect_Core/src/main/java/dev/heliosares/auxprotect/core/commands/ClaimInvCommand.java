@@ -23,6 +23,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.UUID;
 
+@SuppressWarnings("deprecation")
 public class ClaimInvCommand implements CommandExecutor {
 
     private final AuxProtectSpigot plugin;

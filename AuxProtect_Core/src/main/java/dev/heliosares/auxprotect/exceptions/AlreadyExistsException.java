@@ -3,6 +3,7 @@ package dev.heliosares.auxprotect.exceptions;
 import dev.heliosares.auxprotect.core.Language.L;
 import dev.heliosares.auxprotect.database.EntryAction;
 
+@SuppressWarnings("deprecation")
 public class AlreadyExistsException extends AuxProtectException {
     private final EntryAction preexistingAction;
 

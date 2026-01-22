@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 import java.sql.SQLException;
 import java.util.function.Consumer;
 
-@SuppressWarnings("unused")
+@SuppressWarnings({"unused", "deprecation"})
 public final class AuxProtectAPI {
 
     private static IAuxProtect instance;

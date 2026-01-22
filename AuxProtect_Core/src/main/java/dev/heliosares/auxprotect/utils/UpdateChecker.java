@@ -9,6 +9,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
+@SuppressWarnings("deprecation")
 public class UpdateChecker {
 
     /**

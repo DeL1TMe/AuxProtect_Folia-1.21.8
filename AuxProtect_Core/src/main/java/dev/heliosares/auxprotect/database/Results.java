@@ -32,6 +32,7 @@ import java.util.Objects;
 import java.util.Random;
 import java.util.TimeZone;
 
+@SuppressWarnings("deprecation")
 public class Results {
 
     protected final SenderAdapter player;

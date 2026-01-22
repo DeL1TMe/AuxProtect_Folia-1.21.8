@@ -16,6 +16,7 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.UUID;
 
+@SuppressWarnings("deprecation")
 public class InventoryCommand extends Command {
 
     public InventoryCommand(IAuxProtect plugin) {

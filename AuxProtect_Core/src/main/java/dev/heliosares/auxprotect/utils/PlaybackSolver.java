@@ -28,6 +28,7 @@ import java.time.ZoneId;
 import java.util.*;
 import java.util.stream.Collectors;
 
+@SuppressWarnings("deprecation")
 public class PlaybackSolver extends BukkitRunnable {
     private static final Map<UUID, PlaybackSolver> instances = new HashMap<>();
     private final List<PosPoint> points;

@@ -7,7 +7,6 @@ import dev.heliosares.auxprotect.exceptions.BusyException;
 import net.md_5.bungee.api.chat.BaseComponent;
 import net.md_5.bungee.api.chat.ClickEvent;
 import net.md_5.bungee.api.chat.ComponentBuilder;
-import net.md_5.bungee.api.chat.ComponentBuilder.FormatRetention;
 import net.md_5.bungee.api.chat.HoverEvent;
 import net.md_5.bungee.api.chat.hover.content.Text;
 import org.bukkit.ChatColor;
@@ -17,10 +16,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+@SuppressWarnings("deprecation")
 public class XraySolver {
 
     public static BaseComponent[] solve(List<DbEntry> entries) throws SQLException, BusyException {
-        ComponentBuilder message = new ComponentBuilder().append("", FormatRetention.NONE);
+        ComponentBuilder message = new ComponentBuilder().append("", ComponentBuilder.FormatRetention.NONE);
         HashMap<String, ArrayList<DbEntry>> hash = new HashMap<>();
         for (int i = entries.size() - 1; i >= 0; i--) {
             DbEntry entry = entries.get(i);

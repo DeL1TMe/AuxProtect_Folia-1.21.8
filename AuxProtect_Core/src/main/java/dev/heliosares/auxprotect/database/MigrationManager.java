@@ -19,6 +19,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+@SuppressWarnings("deprecation")
 public class MigrationManager {
     public static final int TARGET_DB_VERSION = 15;
     private final SQLManager sql;

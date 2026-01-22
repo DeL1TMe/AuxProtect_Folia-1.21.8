@@ -10,6 +10,7 @@ import javax.annotation.Nullable;
 import java.io.IOException;
 import java.sql.SQLException;
 
+@SuppressWarnings("deprecation")
 public class TransactionEntry extends DbEntry {
     private final short quantity;
     private final double cost;

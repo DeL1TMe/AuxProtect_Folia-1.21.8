@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.function.Supplier;
 
+@SuppressWarnings("deprecation")
 public class Language {
     private static Supplier<ConfigAdapter> langSupplier;
     private static Supplier<ConfigAdapter> langDefaultSupplier;

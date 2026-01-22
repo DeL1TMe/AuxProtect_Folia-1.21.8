@@ -6,6 +6,7 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerCommandPreprocessEvent;
 
+@SuppressWarnings("deprecation")
 public class CommandListener implements Listener {
 
     private final AuxProtectSpigot plugin;

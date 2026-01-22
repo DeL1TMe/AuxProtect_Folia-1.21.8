@@ -10,6 +10,7 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.inventory.ItemStack;
 
+@SuppressWarnings("deprecation")
 public class ChestShopListener implements Listener {
     private final AuxProtectSpigot plugin;
 

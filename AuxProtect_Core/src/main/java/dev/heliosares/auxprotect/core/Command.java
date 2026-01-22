@@ -6,6 +6,7 @@ import dev.heliosares.auxprotect.exceptions.CommandException;
 import javax.annotation.Nullable;
 import java.util.List;
 
+@SuppressWarnings("deprecation")
 public abstract class Command {
     protected final IAuxProtect plugin;
     protected final String label;

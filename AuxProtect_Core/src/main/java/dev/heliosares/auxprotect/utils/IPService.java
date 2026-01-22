@@ -8,6 +8,7 @@ import java.net.URL;
 import java.util.Scanner;
 import java.util.TimeZone;
 
+@SuppressWarnings("deprecation")
 public class IPService {
     private static final String API_URL = "https://ipapi.co/<ip>/yaml/";
 

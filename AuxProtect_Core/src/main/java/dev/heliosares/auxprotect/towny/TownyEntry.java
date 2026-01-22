@@ -8,6 +8,7 @@ import org.bukkit.Location;
 
 import java.sql.SQLException;
 
+@SuppressWarnings("deprecation")
 public class TownyEntry extends DbEntry {
 
     public TownyEntry(String userLabel, EntryAction action, boolean state, Location location, String targetLabel,

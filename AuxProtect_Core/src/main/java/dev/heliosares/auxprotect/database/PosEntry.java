@@ -12,6 +12,7 @@ import org.bukkit.Location;
 
 import java.util.Objects;
 
+@SuppressWarnings("deprecation")
 public class PosEntry extends DbEntry {
     private final double x;
     private final double y;

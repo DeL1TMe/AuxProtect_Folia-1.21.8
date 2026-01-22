@@ -7,6 +7,7 @@ import org.bukkit.entity.Player;
 import java.io.IOException;
 import java.util.UUID;
 
+@SuppressWarnings("deprecation")
 public class FakePlayer {
     private long lastMoved = System.currentTimeMillis();
 

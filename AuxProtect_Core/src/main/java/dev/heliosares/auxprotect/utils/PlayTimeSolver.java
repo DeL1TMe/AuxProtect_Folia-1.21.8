@@ -7,7 +7,6 @@ import dev.heliosares.auxprotect.spigot.AuxProtectSpigot;
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.chat.BaseComponent;
 import net.md_5.bungee.api.chat.ComponentBuilder;
-import net.md_5.bungee.api.chat.ComponentBuilder.FormatRetention;
 import net.md_5.bungee.api.chat.HoverEvent;
 import net.md_5.bungee.api.chat.hover.content.Text;
 
@@ -18,9 +17,10 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("deprecation")
 public class PlayTimeSolver {
     public static BaseComponent[][] solvePlaytime(List<DbEntry> entries, long startTimeMillis, long stopTimeMillis, String player, final boolean currentlyOnline) {
-        ComponentBuilder message = new ComponentBuilder().append("", FormatRetention.NONE);
+        ComponentBuilder message = new ComponentBuilder().append("", ComponentBuilder.FormatRetention.NONE);
         final int limitDays = 60;
         final int hours = (int) Math.ceil((stopTimeMillis - startTimeMillis) / 3600000D);
         if (hours - 1 > limitDays * 24) {

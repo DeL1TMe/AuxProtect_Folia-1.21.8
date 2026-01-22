@@ -10,6 +10,7 @@ import dev.heliosares.auxprotect.exceptions.SyntaxException;
 
 import java.util.List;
 
+@SuppressWarnings("deprecation")
 public class MoneyCommand extends Command {
 
     public MoneyCommand(IAuxProtect plugin) {

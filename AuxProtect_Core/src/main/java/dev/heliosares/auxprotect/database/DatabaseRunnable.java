@@ -10,6 +10,7 @@ import java.util.*;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.function.Consumer;
 
+@SuppressWarnings("deprecation")
 public class DatabaseRunnable implements Runnable {
     private static final HashMap<Table, Long> lastTimes = new HashMap<>();
     private static final long pickupCacheTime = 1500;

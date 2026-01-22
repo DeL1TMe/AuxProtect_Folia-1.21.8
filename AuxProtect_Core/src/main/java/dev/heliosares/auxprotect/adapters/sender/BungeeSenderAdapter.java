@@ -10,6 +10,7 @@ import net.md_5.bungee.api.connection.ProxiedPlayer;
 
 import java.util.UUID;
 
+@SuppressWarnings("deprecation")
 public class BungeeSenderAdapter extends SenderAdapter {
 
     private final CommandSender sender;

@@ -5,6 +5,7 @@ import dev.heliosares.auxprotect.exceptions.BusyException;
 import java.sql.Connection;
 import java.sql.SQLException;
 
+@SuppressWarnings("deprecation")
 @FunctionalInterface
 public interface SQLFunction<T> {
     T apply(Connection connection) throws SQLException, BusyException;

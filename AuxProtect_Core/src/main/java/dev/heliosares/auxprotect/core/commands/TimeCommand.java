@@ -19,6 +19,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.function.Consumer;
 
+@SuppressWarnings("deprecation")
 public class TimeCommand extends Command {
 
     public TimeCommand(IAuxProtect plugin) {

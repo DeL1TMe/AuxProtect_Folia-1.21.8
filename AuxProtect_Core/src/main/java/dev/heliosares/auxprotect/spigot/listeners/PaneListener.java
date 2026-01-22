@@ -8,6 +8,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryCloseEvent;
 
+@SuppressWarnings("deprecation")
 public class PaneListener implements Listener {
 
     @EventHandler

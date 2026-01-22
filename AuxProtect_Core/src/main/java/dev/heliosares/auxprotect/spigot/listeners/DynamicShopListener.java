@@ -11,6 +11,7 @@ import org.bukkit.inventory.ItemStack;
 
 import java.io.IOException;
 
+@SuppressWarnings("deprecation")
 public class DynamicShopListener implements Listener {
     private final AuxProtectSpigot plugin;
 

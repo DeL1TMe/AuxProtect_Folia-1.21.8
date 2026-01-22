@@ -10,6 +10,7 @@ import dev.heliosares.auxprotect.exceptions.BusyException;
 
 import java.util.List;
 
+@SuppressWarnings("deprecation")
 public class SQLCommand extends Command {
 
     public SQLCommand(IAuxProtect plugin) {

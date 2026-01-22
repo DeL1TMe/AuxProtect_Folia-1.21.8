@@ -11,6 +11,7 @@ import dev.heliosares.auxprotect.exceptions.SyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("deprecation")
 public class RetentionCommand extends Command {
 
     public RetentionCommand(IAuxProtect plugin) {

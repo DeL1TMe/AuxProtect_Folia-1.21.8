@@ -2,6 +2,7 @@ package dev.heliosares.auxprotect.database;
 
 import org.bukkit.Location;
 
+@SuppressWarnings("deprecation")
 public class PickupEntry extends DbEntry {
     private int quantity;
 

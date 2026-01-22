@@ -3,6 +3,7 @@ package dev.heliosares.auxprotect.adapters.location;
 import org.bukkit.Location;
 import org.bukkit.World;
 
+@SuppressWarnings("deprecation")
 public class SpigotLocationAdapter extends LocationAdapter {
     private final Location handle;
 

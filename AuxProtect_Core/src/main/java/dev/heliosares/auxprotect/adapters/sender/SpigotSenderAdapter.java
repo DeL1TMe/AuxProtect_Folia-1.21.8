@@ -14,6 +14,7 @@ import dev.heliosares.auxprotect.spigot.utils.SchedulerAdapter;
 import javax.annotation.Nullable;
 import java.util.UUID;
 
+@SuppressWarnings("deprecation")
 public class SpigotSenderAdapter extends SenderAdapter {
 
     private final AuxProtectSpigot plugin;

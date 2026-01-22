@@ -10,6 +10,7 @@ import dev.heliosares.auxprotect.exceptions.SyntaxException;
 
 import java.util.List;
 
+@SuppressWarnings("deprecation")
 public class ActivityCommand extends Command {
 
     public ActivityCommand(IAuxProtect plugin) {

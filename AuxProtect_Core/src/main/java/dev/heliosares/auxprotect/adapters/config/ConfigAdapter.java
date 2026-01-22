@@ -15,6 +15,7 @@ import java.util.Set;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
+@SuppressWarnings("deprecation")
 public abstract class ConfigAdapter {
     @Nullable
     protected final Supplier<File> file;

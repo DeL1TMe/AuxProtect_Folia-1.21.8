@@ -20,6 +20,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+@SuppressWarnings("deprecation")
 public class MoneySolver extends ChartRenderer {
     private final double[] values = new double[100];
     private final List<LocalDate> xDivs;

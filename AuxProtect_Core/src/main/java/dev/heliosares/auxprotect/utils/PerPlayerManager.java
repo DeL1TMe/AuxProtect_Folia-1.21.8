@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.UUID;
 import java.util.function.Supplier;
 
+@SuppressWarnings("deprecation")
 public class PerPlayerManager<V> extends HashMap<UUID, V> {
     private final Supplier<V> supplier;
 

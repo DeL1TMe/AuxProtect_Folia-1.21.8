@@ -12,6 +12,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
+@SuppressWarnings("deprecation")
 public class HasteBinAPI {
     // Partial credit to mfnalex - https://www.spigotmc.org/threads/how-to-use-the-pastebin-api-in-java.500953/
 

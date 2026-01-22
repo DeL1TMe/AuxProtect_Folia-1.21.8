@@ -10,6 +10,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 
+@SuppressWarnings("deprecation")
 public class APConfig {
 
     private IAuxProtect plugin;

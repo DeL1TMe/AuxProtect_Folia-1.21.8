@@ -17,6 +17,7 @@ import java.util.Set;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
+@SuppressWarnings("deprecation")
 public class SpigotConfigAdapter extends ConfigAdapter {
     private FileConfiguration config;
 

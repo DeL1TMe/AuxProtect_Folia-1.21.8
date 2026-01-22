@@ -2,6 +2,7 @@ package dev.heliosares.auxprotect.exceptions;
 
 import dev.heliosares.auxprotect.core.Language.L;
 
+@SuppressWarnings("deprecation")
 public class AuxProtectException extends Exception {
     private final L l;
 

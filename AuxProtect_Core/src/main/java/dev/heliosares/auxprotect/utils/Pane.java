@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 
+@SuppressWarnings("deprecation")
 public class Pane implements InventoryHolder {
     private static final List<Pane> openPanes = new ArrayList<>();
     public final Type type;

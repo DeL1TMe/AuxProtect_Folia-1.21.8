@@ -12,6 +12,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
+@SuppressWarnings("deprecation")
 public class BlobManager {
     private final SQLManager sql;
     private final IAuxProtect plugin;
